@@ -72,7 +72,7 @@ grunt.initConfig({
                 //    'build/menus-skin.css'
                 //]},
 
-                {'build/<%= pkg.name %>.css': [
+                {'build/<%= pkg.name %>': [
                     'build/base.css',
                     //'build/grids.css',
                     'build/buttons.css'
@@ -109,19 +109,6 @@ grunt.initConfig({
         }
     },
 
-    compress: {
-        release: {
-            options: {
-                archive: 'release/<%= pkg.version %>/<%= pkg.name %>-<%= pkg.version %>.tar.gz'
-            },
-
-            expand : true,
-            flatten: true,
-            src    : 'build/*',
-            dest   : '<%= pkg.name %>/<%= pkg.version %>/'
-        }
-    },
-
     license: {
         normalize: {
             options: {
@@ -138,7 +125,7 @@ grunt.initConfig({
             src   : ['base*.css', '<%= pkg.name %>*.css']
         },
 
-        yahoo: {
+        lumia: {
             options: {
                 banner: [
                     '/*!',
@@ -194,8 +181,7 @@ grunt.registerTask('watch', ['default', 'observe']);
 grunt.registerTask('release', [
     'default',
     'clean:release',
-    'copy:release',
-    'compress:release'
+    'copy:release'
 ]);
 
 };
