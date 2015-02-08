@@ -1,7 +1,7 @@
 {
-  "name": "lumia",
-  "version": "0.0.0",
-  "private": true,
+  "name": "lumia.css",
+  "version": "0.0.1",
+  "private": false,
   "repository": "git://github.com/phodal/lumia.css.git",
   "scripts": {
     "test": "grunt test"
