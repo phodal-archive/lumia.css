@@ -1,9 +1,10 @@
+.btn {
+    color:#fff;
+}
 
 .btn-green {
     padding: .5em 1em;
-    color: #FFF;
     background-color: #4bc970;
-    font-size: 18px;
     text-align: center;
     font-style: normal;
     border-radius: 5px;
@@ -15,9 +16,7 @@
 
 .btn-cyan {
     padding: .5em 1em;
-    color: #FFF;
     background-color: #2bb8c9;
-    font-size: 18px;
     text-align: center;
     font-style: normal;
     border-radius: 5px;
@@ -29,9 +28,7 @@
 
 .btn-pink {
     padding: .5em 1em;
-    color: #FFF;
     background-color: #f5cec0;
-    font-size: 18px;
     text-align: center;
     font-style: normal;
     border-radius: 5px;
