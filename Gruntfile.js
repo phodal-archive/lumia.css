@@ -79,15 +79,6 @@ grunt.initConfig({
                     'build/forms.css',
                     'build/menus.css',
                     'build/tables.css'
-                ]},
-
-                {'build/<%= pkg.name %>-nr.css': [
-                    'build/base.css',
-                    'build/grids.css',
-                    'build/buttons.css',
-                    'build/forms-nr.css',
-                    'build/menus.css',
-                    'build/tables.css'
                 ]}
             ]
         }
@@ -231,8 +222,7 @@ grunt.loadNpmTasks('grunt-css-selectors');
 grunt.loadNpmTasks('grunt-pure-grids');
 grunt.loadNpmTasks('grunt-stripmq');
 
-grunt.registerTask('default', ['import', 'test', 'build']);
-grunt.registerTask('import', ['bower_install']);
+grunt.registerTask('default', ['test', 'build']);
 grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
