@@ -145,7 +145,7 @@ grunt.initConfig({
     observe: {
         src: {
             files: 'src/**/css/*.css',
-            tasks: ['test', 'suppress', 'build'],
+            tasks: ['test', 'build'],
 
             options: {
                 interrupt: true
