@@ -50,35 +50,35 @@ grunt.initConfig({
                     'build/buttons.css'
                 ]},
 
-                {'build/forms-nr.css': [
-                    'build/forms.css'
-                ]},
-
-                {'build/forms.css': [
-                    'build/forms-nr.css',
-                    'build/forms-r.css'
-                ]},
-
-                {'build/grids.css': [
-                    'build/grids-core.css',
-                    'build/grids-units.css'
-                ]},
-
-                {'build/menus.css': [
-                    'build/menus-core.css',
-                    'build/menus-horizontal.css',
-                    'build/menus-dropdown.css',
-                    'build/menus-scrollable.css',
-                    'build/menus-skin.css'
-                ]},
+                //{'build/forms-nr.css': [
+                //    'build/forms.css'
+                //]},
+                //
+                //{'build/forms.css': [
+                //    'build/forms-nr.css',
+                //    'build/forms-r.css'
+                //]},
+                //
+                //{'build/grids.css': [
+                //    'build/grids-core.css',
+                //    'build/grids-units.css'
+                //]},
+                //
+                //{'build/menus.css': [
+                //    'build/menus-core.css',
+                //    'build/menus-horizontal.css',
+                //    'build/menus-dropdown.css',
+                //    'build/menus-scrollable.css',
+                //    'build/menus-skin.css'
+                //]},
 
                 {'build/<%= pkg.name %>.css': [
                     'build/base.css',
-                    'build/grids.css',
-                    'build/buttons.css',
-                    'build/forms.css',
-                    'build/menus.css',
-                    'build/tables.css'
+                    //'build/grids.css',
+                    'build/buttons.css'
+                    //'build/forms.css',
+                    //'build/menus.css',
+                    //'build/tables.css'
                 ]}
             ]
         }
@@ -90,11 +90,11 @@ grunt.initConfig({
         },
 
         base   : ['src/base/css/*.css'],
-        buttons: ['src/buttons/css/*.css'],
-        forms  : ['src/forms/css/*.css'],
-        grids  : ['src/grids/css/*.css'],
-        menus  : ['src/menus/css/*.css'],
-        tables : ['src/tables/css/*.css']
+        buttons: ['src/buttons/css/*.css']
+        //forms  : ['src/forms/css/*.css'],
+        //grids  : ['src/grids/css/*.css'],
+        //menus  : ['src/menus/css/*.css'],
+        //tables : ['src/tables/css/*.css']
     },
 
     cssmin: {
@@ -155,50 +155,6 @@ grunt.initConfig({
         }
     },
 
-    pure_grids: {
-        default_units: {
-            dest: 'build/grids-units.css',
-
-            options: {
-                units: [5, 24]
-            }
-        },
-
-        responsive: {
-            dest: 'build/grids-responsive.css',
-
-            options: {
-                mediaQueries: {
-                    sm: 'screen and (min-width: 35.5em)',   // 568px
-                    md: 'screen and (min-width: 48em)',     // 768px
-                    lg: 'screen and (min-width: 64em)',     // 1024px
-                    xl: 'screen and (min-width: 80em)'      // 1280px
-                }
-            }
-        }
-    },
-
-    stripmq: {
-        all: {
-            files: {
-                //follows the pattern 'destination': ['source']
-                'build/grids-responsive-old-ie.css':
-                    ['build/grids-responsive.css']
-            }
-        }
-    },
-
-    css_selectors: {
-        base: {
-            src : 'build/base.css',
-            dest: 'build/base-context.css',
-
-            options: {
-                mutations: [{prefix: '.pure'}]
-            }
-        }
-    },
-
     observe: {
         src: {
             files: 'src/**/css/*.css',
@@ -227,13 +183,9 @@ grunt.registerTask('test', ['csslint']);
 grunt.registerTask('build', [
     'clean:build',
     'copy:build',
-    'pure_grids',
-    'stripmq',
     'concat:build',
     'clean:build_res',
-    'css_selectors:base',
-    'cssmin',
-    'license'
+    'cssmin'
 ]);
 
 grunt.renameTask('watch', 'observe');
@@ -243,7 +195,6 @@ grunt.registerTask('release', [
     'default',
     'clean:release',
     'copy:release',
-    'bower_json:release',
     'compress:release'
 ]);
 
