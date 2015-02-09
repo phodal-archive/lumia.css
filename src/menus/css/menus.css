@@ -1,0 +1,53 @@
+#lumia-nav-wrapper {
+    background: #fff;
+    float: left;
+    position: relative;
+    width: 100%;
+    min-height: 42px;
+    max-height: 86px;
+}
+
+.lumia-nav {
+    display: block;
+    float: left;
+    width: 100%;
+    z-index: 3;
+}
+
+.lumia-nav ul {
+    padding: 5px 25px;
+    position: relative;
+    width: 960px;
+    margin-top: -1px;
+}
+
+.lumia-nav ul li {
+    display: inline;
+    float: left;
+    padding: 12px 12px;
+    position: relative;
+}
+
+.lumia-nav ul li a {
+    color: #999;
+    text-decoration: none;
+}
+
+.lumia-nav ul li ul {
+    display: none;
+    z-index: 9999;
+}
+
+.lumia-nav ul ul li a:hover {
+    color: #111 !important;
+}
+
+.lumia-nav ul li:hover ul {
+    background: #fff;
+    -webkit-box-shadow: 0 3px 7px -2px #333;
+    box-shadow: 0 3px 7px -2px #333;
+    display: block;
+    margin-top: 5px;
+    padding: 5px;
+    width: 150px;
+}

@@ -64,20 +64,21 @@ grunt.initConfig({
                 //    'build/grids-units.css'
                 //]},
                 //
-                //{'build/menus.css': [
+                {'build/menus.css': [
+	                  'build/menus.css'
                 //    'build/menus-core.css',
                 //    'build/menus-horizontal.css',
                 //    'build/menus-dropdown.css',
                 //    'build/menus-scrollable.css',
                 //    'build/menus-skin.css'
-                //]},
+                ]},
 
                 {'build/<%= pkg.name %>': [
                     'build/base.css',
                     //'build/grids.css',
-                    'build/buttons.css'
+                    'build/buttons.css',
                     //'build/forms.css',
-                    //'build/menus.css',
+                    'build/menus.css'
                     //'build/tables.css'
                 ]}
             ]
