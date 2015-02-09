@@ -33,12 +33,7 @@
     text-decoration: none;
 }
 
-.lumia-nav ul li ul {
-    display: none;
-    z-index: 9999;
-}
-
-.lumia-nav ul ul li a:hover {
+.lumia-nav ul li a:hover {
     color: #111 !important;
 }
 
